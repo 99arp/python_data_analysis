@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>lado</class>
+ <widget class="QWidget" name="lado">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1362</width>
+    <height>934</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTabWidget" name="TabWidget">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>40</y>
+     <width>1071</width>
+     <height>791</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="SingleDataTab">
+    <attribute name="title">
+     <string>Analysis of a Curve</string>
+    </attribute>
+    <widget class="QPushButton" name="LoadData">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>20</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Load Data</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ResetExpNr">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>70</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reset 
+Exp. Nr</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="ExperimentNumber">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>120</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::PlusMinus</enum>
+     </property>
+     <property name="accelerated">
+      <bool>true</bool>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="Smoothing">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>170</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::PlusMinus</enum>
+     </property>
+     <property name="accelerated">
+      <bool>true</bool>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>20</number>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="OnlySmoothingCB">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>730</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Only Smoothing</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="CompareCB">
+     <property name="geometry">
+      <rect>
+       <x>740</x>
+       <y>730</y>
+       <width>70</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Compare</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="DrawLinesOnGraphCB">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>730</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Draw Lines On Graph</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>90</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Experiment Nr.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>150</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Smoothing</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Ready">
+     <property name="geometry">
+      <rect>
+       <x>920</x>
+       <y>220</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ready</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ReadyArea">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>240</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Shows if Data is loaded</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DataQ">
+     <property name="geometry">
+      <rect>
+       <x>920</x>
+       <y>280</y>
+       <width>61</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text">
+      <string>Raw 
+ Data Quality</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DataQualityButton">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>320</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Shows the Qualtiy of Loaded Data</string>
+     </property>
+     <property name="text">
+      <string>Data Not
+ Loaded</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="DrawDerivativeCBA">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>730</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Draw Derivative</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ManyDataTab">
+    <attribute name="title">
+     <string>Analysis of Whole Dataset</string>
+    </attribute>
+    <widget class="QPushButton" name="LoadDataB">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>20</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Load Data</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>150</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Experiment Nr.</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="ExperimentNumberB">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>130</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::PlusMinus</enum>
+     </property>
+     <property name="accelerated">
+      <bool>true</bool>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="PlotDataNrSpinnerB">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>190</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::PlusMinus</enum>
+     </property>
+     <property name="accelerated">
+      <bool>true</bool>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="P">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>210</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Plot Data  Nr.</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="SmoothingSpinnerB">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>310</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Changes smoothing of dataset. effect only seen in exported excel data</string>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::PlusMinus</enum>
+     </property>
+     <property name="accelerated">
+      <bool>true</bool>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>20</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="S">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>330</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Smoothing</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ExportExcelB">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>70</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Export Result
+ to Excel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ReadyB">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>540</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ready</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ReadyAreaB">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>560</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="DataAnalysisGroup">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>440</y>
+       <width>120</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Data Analysis Method</string>
+     </property>
+     <widget class="QCheckBox" name="UseTimeStampCB">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use Time Stamp</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="UseDerivativeCB">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use Derivative
+(Default)</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>730</y>
+       <width>861</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QCheckBox" name="SensitivityBCB">
+        <property name="text">
+         <string>Sensitivity</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="BaselineBCB">
+        <property name="text">
+         <string>Baseline</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="IStableBCB">
+        <property name="text">
+         <string>I Stable</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="I90BCB">
+        <property name="text">
+         <string>I90</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="T90BCB">
+        <property name="text">
+         <string>T90</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="F90BCB">
+        <property name="text">
+         <string>F90</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="AutoExportBCB">
+        <property name="text">
+         <string>Auto Export</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
